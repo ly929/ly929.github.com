@@ -154,6 +154,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Shadowsocks-Python版一键安装脚本" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/05/Shadowsocks-Python版一键安装脚本/">Shadowsocks Python版一键安装脚本</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/05/Shadowsocks-Python版一键安装脚本/" class="archive-article-date">
+  	<time datetime="2019-03-05T13:58:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Shadowsocks Python版一键安装脚本<br>原文由【秋水逸冰】发布于<a href="https://teddysun.com/342.html" target="_blank" rel="noopener">https://teddysun.com/342.html</a><br>由于原文需要FQ才能访问，故备份<br>本脚本适用环境：<br>系统支持：CentOS 6，7，Debian，Ubuntu<br>内存要求：≥128M<br>日期：2018 年 02 月 07 日<br>关于本脚本：<br>一键安装 Python 版 Shadowsocks 的最新版。<br>友情提示：如果你有问题，请先参考这篇《Shadowsocks Troubleshooting》后再问。<br>默认配置：<br>服务器端口：自己设定（如不设定，默认从 9000-19999 之间随机生成）<br>密码：自己设定（如不设定，默认为 teddysun.com）<br>加密方式：自己设定（如不设定，默认为 aes-256-gcm）<br>备注：脚本默认创建单用户配置文件，如需配置多用户，安装完毕后参照下面的教程示例手动修改配置文件后重启即可。<br>Shadowsocks for Windows 客户端下载：<br><a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks-windows/releases</a><br>使用方法：<br>使用root用户登录，运行以下命令：<br>wget –no-check-certificate -O shadowsocks.sh <a href="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</a><br>chmod +x shadowsocks.sh<br>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log<br>安装完成后，脚本提示如下：<br>Congratulations, Shadowsocks-python server install completed!<br>Your Server IP        :your_server_ip<br>Your Server Port      :your_server_port<br>Your Password         :your_password<br>Your Encryption Method:your_encryption_method</p>
+<p>Welcome to visit:<a href="https://teddysun.com/342.html" target="_blank" rel="noopener">https://teddysun.com/342.html</a><br>Enjoy it!<br>卸载方法：<br>使用root用户登录，运行以下命令：<br>./shadowsocks.sh uninstall<br>单用户配置文件示例（2015 年 08 月 28 日修正）：<br>配置文件路径：/etc/shadowsocks.json<br>{<br>    “server”:”0.0.0.0”,<br>    “server_port”:your_server_port,<br>    “local_address”:”127.0.0.1”,<br>    “local_port”:1080,<br>    “password”:”your_password”,<br>    “timeout”:300,<br>    “method”:”your_encryption_method”,<br>    “fast_open”: false<br>}<br>
+        
+          <a class="article-more-a" href="/2019/03/05/Shadowsocks-Python版一键安装脚本/#more">more >></a>
+        
+      
+	  
+	
+	
+	  <div class="declare" hidden="hidden"></div>
+	
+	
+      
+    </p></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Shadowsocks</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/05/Shadowsocks-Python版一键安装脚本/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java多线程的3个核心" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -161,13 +243,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/24/Java多线程的3个核心/">Java 多线程三大核心</a>
+      <a class="article-title" href="/2019/03/05/Java多线程的3个核心/">Java 多线程三大核心</a>
     </h1>
   
 
         
-        <a href="/2019/01/24/Java多线程的3个核心/" class="archive-article-date">
-  	<time datetime="2019-01-24T10:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-24</time>
+        <a href="/2019/03/05/Java多线程的3个核心/" class="archive-article-date">
+  	<time datetime="2019-03-05T10:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-05</time>
 </a>
         
       </header>
@@ -183,9 +265,9 @@
 </ul>
 <p>这三步操作，所以想要实现 <code>i++</code> 这样的原子操作就需要用到 <code>synchronized</code> 或者是 <code>lock</code> 进行加锁处理。</p>
 <p>如果是基础类的自增操作可以使用 <code>AtomicInteger</code> 这样的原子类来实现(其本质是利用了 <code>CPU</code> 级别的 的 <code>CAS</code> 指令来完成的)。</p>
-<p>其中用的最多的方法就是: <code>incrementAndGet()</code> 以原子的方式自增。
+<p>其中用的最多的方法就是: <code>incrementAndGet()</code> 以原子的方式自增。<br>
         
-          <a class="article-more-a" href="/2019/01/24/Java多线程的3个核心/#more">more >></a>
+          <a class="article-more-a" href="/2019/03/05/Java多线程的3个核心/#more">more >></a>
         
       
 	  
@@ -225,7 +307,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/24/Java多线程的3个核心/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/03/05/Java多线程的3个核心/">展开全文 >></a>
         </p>
       
 
@@ -446,6 +528,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Shadowsocks</a>
               </li>
              
               <li class="article-tag-list-item">

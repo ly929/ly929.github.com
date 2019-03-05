@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://ly929.github.io">
-  <title>Archives: 2019/1 | 小晕借点盐</title>
+  <title>Java 多线程三大核心 | 小晕借点盐</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java小将|膜法师">
-<meta name="keywords" content="Java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小晕借点盐">
-<meta property="og:url" content="https://ly929.github.io/archives/2019/01/index.html">
+  <meta name="description" content="Java 多线程三大核心原子性Java 的原子性就和数据库事务的原子性差不多，一个操作中要么全部执行成功或者失败。 JMM 只是保证了基本的原子性，但类似于 i++ 之类的操作，看似是原子操作，其实里面涉及到:  获取 i 的值。 自增。 再赋值给 i。  这三步操作，所以想要实现 i++ 这样的原子操作就需要用到 synchronized 或者是 lock 进行加锁处理。 如果是基础类的自增操作">
+<meta name="keywords" content="Java 多线程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 多线程三大核心">
+<meta property="og:url" content="https://ly929.github.io/2019/03/05/Java多线程的3个核心/index.html">
 <meta property="og:site_name" content="小晕借点盐">
-<meta property="og:description" content="Java小将|膜法师">
+<meta property="og:description" content="Java 多线程三大核心原子性Java 的原子性就和数据库事务的原子性差不多，一个操作中要么全部执行成功或者失败。 JMM 只是保证了基本的原子性，但类似于 i++ 之类的操作，看似是原子操作，其实里面涉及到:  获取 i 的值。 自增。 再赋值给 i。  这三步操作，所以想要实现 i++ 这样的原子操作就需要用到 synchronized 或者是 lock 进行加锁处理。 如果是基础类的自增操作">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fmouu3fpokj31ae0osjt1.jpg">
+<meta property="og:updated_time" content="2019-03-05T13:56:15.364Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小晕借点盐">
-<meta name="twitter:description" content="Java小将|膜法师">
+<meta name="twitter:title" content="Java 多线程三大核心">
+<meta name="twitter:description" content="Java 多线程三大核心原子性Java 的原子性就和数据库事务的原子性差不多，一个操作中要么全部执行成功或者失败。 JMM 只是保证了基本的原子性，但类似于 i++ 之类的操作，看似是原子操作，其实里面涉及到:  获取 i 的值。 自增。 再赋值给 i。  这三步操作，所以想要实现 i++ 这样的原子操作就需要用到 synchronized 或者是 lock 进行加锁处理。 如果是基础类的自增操作">
+<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fmouu3fpokj31ae0osjt1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="小晕借点盐" type="application/atom+xml">
   
@@ -152,71 +155,265 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java多线程的3个核心" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/24/hello-world/" class="archive-article-date">
-  	<time datetime="2019-01-24T06:27:53.419Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/24/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      Java 多线程三大核心
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/03/05/Java多线程的3个核心/" class="archive-article-date">
+  	<time datetime="2019-03-05T10:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java-多线程三大核心"><a href="#Java-多线程三大核心" class="headerlink" title="Java 多线程三大核心"></a>Java 多线程三大核心</h1><h2 id="原子性"><a href="#原子性" class="headerlink" title="原子性"></a>原子性</h2><p><code>Java</code> 的原子性就和数据库事务的原子性差不多，一个操作中要么全部执行成功或者失败。</p>
+<p><code>JMM</code> 只是保证了基本的原子性，但类似于 <code>i++</code> 之类的操作，看似是原子操作，其实里面涉及到:</p>
+<ul>
+<li>获取 i 的值。</li>
+<li>自增。</li>
+<li>再赋值给 i。</li>
+</ul>
+<p>这三步操作，所以想要实现 <code>i++</code> 这样的原子操作就需要用到 <code>synchronized</code> 或者是 <code>lock</code> 进行加锁处理。</p>
+<p>如果是基础类的自增操作可以使用 <code>AtomicInteger</code> 这样的原子类来实现(其本质是利用了 <code>CPU</code> 级别的 的 <code>CAS</code> 指令来完成的)。</p>
+<p>其中用的最多的方法就是: <code>incrementAndGet()</code> 以原子的方式自增。<br><a id="more"></a><br>源码如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">long</span> <span class="title">incrementAndGet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">            <span class="keyword">long</span> current = get();</span><br><span class="line">            <span class="keyword">long</span> next = current + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (compareAndSet(current, next))</span><br><span class="line">                <span class="keyword">return</span> next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>首先是获得当前的值，然后自增 +1。接着则是最核心的 <code>compareAndSet()</code> 来进行原子更新。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">boolean</span> <span class="title">compareAndSet</span><span class="params">(<span class="keyword">long</span> expect, <span class="keyword">long</span> update)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> unsafe.compareAndSwapLong(<span class="keyword">this</span>, valueOffset, expect, update);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>其逻辑就是判断当前的值是否被更新过，是否等于 <code>current</code>，如果等于就说明没有更新过然后将当前的值更新为 <code>next</code>，如果不等于则返回<code>false</code> 进入循环，直到更新成功为止。</p>
+<p>还有其中的 <code>get()</code> 方法也很关键，返回的是当前的值，当前值用了 <code>volatile</code> 关键词修饰，保证了内存可见性。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">int</span> value;</span><br></pre></td></tr></table></figure>
+<h2 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h2><p>现代计算机中，由于 <code>CPU</code> 直接从主内存中读取数据的效率不高，所以都会对应的 <code>CPU</code> 高速缓存，先将主内存中的数据读取到缓存中，线程修改数据之后首先更新到缓存，之后才会更新到主内存。如果此时还没有将数据更新到主内存其他的线程此时来读取就是修改之前的数据。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fmouu3fpokj31ae0osjt1.jpg" alt=""></p>
+<p>如上图所示。</p>
+<p><code>volatile</code> 关键字就是用于保证内存可见性，当线程A更新了 volatile 修饰的变量时，它会立即刷新到主线程，并且将其余缓存中该变量的值清空，导致其余线程只能去主内存读取最新值。</p>
+<p>使用 <code>volatile</code> 关键词修饰的变量每次读取都会得到最新的数据，不管哪个线程对这个变量的修改都会立即刷新到主内存。</p>
+<p><code>synchronized</code>和加锁也能能保证可见性，实现原理就是在释放锁之前其余线程是访问不到这个共享变量的。但是和 <code>volatile</code> 相比开销较大。</p>
+<h2 id="顺序性"><a href="#顺序性" class="headerlink" title="顺序性"></a>顺序性</h2><p>以下这段代码:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">100</span> ; <span class="comment">//1</span></span><br><span class="line"><span class="keyword">int</span> b = <span class="number">200</span> ; <span class="comment">//2</span></span><br><span class="line"><span class="keyword">int</span> c = a + b ; <span class="comment">//3</span></span><br></pre></td></tr></table></figure>
+<p>正常情况下的执行顺序应该是 <code>1&gt;&gt;2&gt;&gt;3</code>。但是有时 <code>JVM</code> 为了提高整体的效率会进行指令重排导致执行的顺序可能是 <code>2&gt;&gt;1&gt;&gt;3</code>。但是 <code>JVM</code> 也不能是什么都进行重排，是在保证最终结果和代码顺序执行结果一致的情况下才可能进行重排。</p>
+<p>重排在单线程中不会出现问题，但在多线程中会出现数据不一致的问题。</p>
+<p>Java 中可以使用 <code>volatile</code> 来保证顺序性，<code>synchronized 和 lock</code> 也可以来保证有序性，和保证原子性的方式一样，通过同一段时间只能一个线程访问来实现的。</p>
+<p>除了通过 <code>volatile</code> 关键字显式的保证顺序之外， <code>JVM</code> 还通过 <code>happen-before</code> 原则来隐式的保证顺序性。</p>
+<p>其中有一条就是适用于 <code>volatile</code> 关键字的，针对于 <code>volatile</code> 关键字的写操作肯定是在读操作之前，也就是说读取的值肯定是最新的。</p>
+<h3 id="volatile-的应用"><a href="#volatile-的应用" class="headerlink" title="volatile 的应用"></a>volatile 的应用</h3><h4 id="双重检查锁的单例模式"><a href="#双重检查锁的单例模式" class="headerlink" title="双重检查锁的单例模式"></a>双重检查锁的单例模式</h4><p>可以用 <code>volatile</code> 实现一个双重检查锁的单例模式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> Singleton singleton;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (Singleton.class) &#123;</span><br><span class="line">                <span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    singleton = <span class="keyword">new</span> Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> singleton;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里的 <code>volatile</code> 关键字主要是为了防止指令重排。<br>如果不用 <code>volatile</code> ，<code>singleton = new Singleton();</code>，这段代码其实是分为三步：</p>
+<ul>
+<li>分配内存空间。(1)</li>
+<li>初始化对象。(2)</li>
+<li>将 <code>singleton</code> 对象指向分配的内存地址。(3)</li>
+</ul>
+<p>加上 <code>volatile</code> 是为了让以上的三步操作顺序执行，反之有可能第三步在第二步之前被执行就有可能导致某个线程拿到的单例对象还没有初始化，以致于使用报错。</p>
+<h4 id="控制停止线程的标记"><a href="#控制停止线程的标记" class="headerlink" title="控制停止线程的标记"></a>控制停止线程的标记</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">boolean</span> flag ;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">while</span> (flag) &#123;</span><br><span class="line">                doSomeThing();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">stop</span><span class="params">()</span></span>&#123;</span><br><span class="line">    flag = <span class="keyword">false</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里如果没有用 volatile 来修饰 flag ，就有可能其中一个线程调用了 <code>stop()</code>方法修改了 flag 的值并不会立即刷新到主内存中，导致这个循环并不会立即停止。</p>
+<p>这里主要利用的是 <code>volatile</code> 的内存可见性。</p>
+<p>总结一下:</p>
+<ul>
+<li><code>volatile</code> 关键字只能保证可见性，顺序性，<strong>不能保证原子性</strong>。</li>
+</ul>
+
+      
+	  
+	
+	
+	  <div class="declare" hidden="hidden"></div>
+	
+	
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">test</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java 多线程</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/test//" class="article-tag-list-link color5">test</a>
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ly929.github.io/2019/03/05/Java多线程的3个核心/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/03/05/Shadowsocks-Python版一键安装脚本/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Shadowsocks Python版一键安装脚本
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/01/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-多线程三大核心"><span class="toc-number">1.</span> <span class="toc-text">Java 多线程三大核心</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原子性"><span class="toc-number">1.1.</span> <span class="toc-text">原子性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可见性"><span class="toc-number">1.2.</span> <span class="toc-text">可见性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序性"><span class="toc-number">1.3.</span> <span class="toc-text">顺序性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#volatile-的应用"><span class="toc-number">1.3.1.</span> <span class="toc-text">volatile 的应用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#双重检查锁的单例模式"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">双重检查锁的单例模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#控制停止线程的标记"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">控制停止线程的标记</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = '[object Object]'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  
+
+  
 
 
           </div>
@@ -242,8 +439,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
