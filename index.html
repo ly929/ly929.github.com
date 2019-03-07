@@ -154,6 +154,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-tomcat 出现的PermGen Space问题" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/05/tomcat 出现的PermGen Space问题/">JVM参数的含义</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/05/tomcat 出现的PermGen Space问题/" class="archive-article-date">
+  	<time datetime="2019-03-05T14:05:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>记录一下以前遇到的问题</p>
+</blockquote>
+<p>问题：<br>tomcat服务器运行一段时间，总是会自动报异常：java.lang.OutOfmemoryError: PermGen Space 的错误，导致项目无法正常运行。<br>介绍：<br>PermGen Space：指的是内存的永久保存区，该块内存主要是被JVM用来存放 class 和 mete 信息的，当 class 被加载 loader 的时候就会被存储到该内存区中，与存放类的实例的heap区不同，java中的 垃圾回收器GC 不会在主程序运行期对 PermGen space 进行清理。<br>原因：</p>
+<ol>
+<li>当我们的应用中有很多的class时，很可能就会出现PermGen space的错误。</li>
+<li><p>我们的 tomcat 在重启的时候，不是使用的 ./bin/shutdown.sh 而是使用 kill -9 xxx 直接杀掉，这样的话，存在 PermGen space 里面的内存不会被释放的，这样多长进行 kill 之后，就会导致系统的内存被渐渐吃完了，直到最后 tomcat 报错。</p>
+        
+          <a class="article-more-a" href="/2019/03/05/tomcat 出现的PermGen Space问题/#more">more >></a>
+        
+      
+	  
+	
+	
+	  <div class="declare" hidden="hidden"></div>
+	
+	
+      
+    </li></ol></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/05/tomcat 出现的PermGen Space问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Shadowsocks-Python版一键安装脚本" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -174,8 +261,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Shadowsocks Python版一键安装脚本<br>原文由【秋水逸冰】发布于<a href="https://teddysun.com/342.html" target="_blank" rel="noopener">https://teddysun.com/342.html</a><br>由于原文需要FQ才能访问，故备份<br>本脚本适用环境：<br>系统支持：CentOS 6，7，Debian，Ubuntu<br>内存要求：≥128M<br>日期：2018 年 02 月 07 日<br>关于本脚本：<br>一键安装 Python 版 Shadowsocks 的最新版。<br>友情提示：如果你有问题，请先参考这篇《Shadowsocks Troubleshooting》后再问。<br>默认配置：<br>服务器端口：自己设定（如不设定，默认从 9000-19999 之间随机生成）<br>密码：自己设定（如不设定，默认为 teddysun.com）<br>加密方式：自己设定（如不设定，默认为 aes-256-gcm）<br>备注：脚本默认创建单用户配置文件，如需配置多用户，安装完毕后参照下面的教程示例手动修改配置文件后重启即可。<br>Shadowsocks for Windows 客户端下载：<br><a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks-windows/releases</a><br>使用方法：<br>使用root用户登录，运行以下命令：<br>wget –no-check-certificate -O shadowsocks.sh <a href="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</a><br>chmod +x shadowsocks.sh<br>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log<br>安装完成后，脚本提示如下：<br>Congratulations, Shadowsocks-python server install completed!<br>Your Server IP        :your_server_ip<br>Your Server Port      :your_server_port<br>Your Password         :your_password<br>Your Encryption Method:your_encryption_method</p>
-<p>Welcome to visit:<a href="https://teddysun.com/342.html" target="_blank" rel="noopener">https://teddysun.com/342.html</a><br>Enjoy it!<br>卸载方法：<br>使用root用户登录，运行以下命令：<br>./shadowsocks.sh uninstall<br>单用户配置文件示例（2015 年 08 月 28 日修正）：<br>配置文件路径：/etc/shadowsocks.json<br>{<br>    “server”:”0.0.0.0”,<br>    “server_port”:your_server_port,<br>    “local_address”:”127.0.0.1”,<br>    “local_port”:1080,<br>    “password”:”your_password”,<br>    “timeout”:300,<br>    “method”:”your_encryption_method”,<br>    “fast_open”: false<br>}<br>
+        <p>Shadowsocks Python版一键安装脚本<br>原文由【秋水逸冰】发布于<a href="https://teddysun.com/342.html" target="_blank" rel="noopener">https://teddysun.com/342.html</a><br>由于原文需要FQ才能访问，故备份<br>本脚本适用环境：<br>系统支持：CentOS 6，7，Debian，Ubuntu<br>内存要求：≥128M<br>日期：2018 年 02 月 07 日<br>关于本脚本：<br>一键安装 Python 版 Shadowsocks 的最新版。<br>友情提示：如果你有问题，请先参考这篇《Shadowsocks Troubleshooting》后再问。<br>默认配置：<br>服务器端口：自己设定（如不设定，默认从 9000-19999 之间随机生成）<br>密码：自己设定（如不设定，默认为 teddysun.com）<br>加密方式：自己设定（如不设定，默认为 aes-256-gcm）<br>备注：脚本默认创建单用户配置文件，如需配置多用户，安装完毕后参照下面的教程示例手动修改配置文件后重启即可。<br>
         
           <a class="article-more-a" href="/2019/03/05/Shadowsocks-Python版一键安装脚本/#more">more >></a>
         
@@ -527,15 +613,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Shadowsocks</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">test</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
               </li>
             
             <div class="clearfix"></div>
