@@ -150,6 +150,175 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Sql语句中的DDL、DML、DCL的介绍" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/18/Sql语句中的DDL、DML、DCL的介绍/">Sql语句中的DDL、DML、DCL的介绍</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/18/Sql语句中的DDL、DML、DCL的介绍/" class="archive-article-date">
+  	<time datetime="2019-03-18T12:38:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、DDL"><a href="#一、DDL" class="headerlink" title="一、DDL"></a>一、DDL</h1><p><strong>DDL is Data Definition Language statements.</strong> 数据定义语言，用于定义和管理 SQL 数据库中的所有对象的语言</p>
+<p>1.<strong>CREATE</strong> - to create objects in the database 创建<br>2.<strong>ALTER</strong> - alters the structure of the database 修改<br>3.<strong>DROP</strong> - delete objects from the database 删除<br>4.<strong>TRUNCATE</strong> - remove all records from a table, including all spaces allocated for the records are removed</p>
+<p>TRUNCATE TABLE [Table Name]。<br>下面是对Truncate语句在MSSQLServer2000中用法和原理的说明：<br>Truncate table 表名 速度快,而且效率高,因为:<br>TRUNCATE TABLE 在功能上与不带 WHERE 子句的 DELETE 语句相同：二者均删除表中的全部行。但 TRUNCATE TABLE 比 DELETE 速度快，且使用的系统和事务日志资源少。<br>DELETE 语句每次删除一行，并在事务日志中为所删除的每行记录一项。TRUNCATE TABLE 通过释放存储表数据所用的数据页来删除数据，并且只在事务日志中记录页的释放。<br>TRUNCATE TABLE 删除表中的所有行，但表结构及其列、约束、索引等保持不变。新行标识所用的计数值重置为该列的种子。如果想保留标识计数值，请改用 DELETE。如果要删除表定义及其数据，请使用 DROP TABLE 语句。<br>对于由 FOREIGN KEY 约束引用的表，不能使用 TRUNCATE TABLE，而应使用不带 WHERE 子句的 DELETE 语句。由于 TRUNCATE TABLE 不记录在日志中，所以它不能激活触发器。<br>TRUNCATE TABLE 不能用于参与了索引视图的表。<br>5.<strong>COMMENT</strong> - add comments to the data dictionary 注释<br>6.<strong>GRANT</strong> - gives user’s access privileges to database 授权<br>7.<strong>REVOKE</strong> - withdraw access privileges given with the GRANT command 收回已经授予的权限</p>
+<h1 id="二、DML"><a href="#二、DML" class="headerlink" title="二、DML"></a>二、DML</h1><p><strong>DML is Data Manipulation Language statements.</strong> 数据操作语言，SQL中处理数据等操作统称为数据操纵语言</p>
+<p>1.<strong>SELECT</strong> - retrieve data from the a database 查询<br>2.<strong>INSERT</strong> - insert data into a table 添加<br>3.<strong>UPDATE</strong> - updates existing data within a table 更新<br>4.<strong>DELETE</strong> - deletes all records from a table, the space for the records remain 删除<br>5.<strong>CALL</strong> - call a PL/SQL or Java subprogram<br>6.<strong>EXPLAIN PLAN</strong> - explain access path to data<br>Oracle RDBMS执行每一条SQL语句，都必须经过Oracle优化器的评估。所以，了解优化器是如何选择(搜索)路径以及索引是如何被使用的，对优化SQL语句有很大的帮助。Explain可以用来迅速方便地查出对于给定SQL语句中的查询数据是如何得到的即搜索路径(我们通常称为Access Path)。从而使我们选择最优的查询方式达到最大的优化效果。<br>7.<strong>LOCK TABLE</strong> - control concurrency 锁，用于控制并发</p>
+<h1 id="三、DCL"><a href="#三、DCL" class="headerlink" title="三、DCL"></a>三、DCL</h1><p><strong>DCL is Data Control Language statements.</strong> 数据控制语言，用来授予或回收访问数据库的某种特权，并控制数据库操纵事务发生的时间及效果，对数据库实行监视等<br><strong>COMMIT</strong> - save work done 提交<br><strong>SAVEPOINT</strong> - identify a point in a transaction to which you can later roll back 保存点<br><strong>ROLLBACK</strong> - restore database to original since the last COMMIT 回滚<br><strong>SET TRANSACTION </strong>- Change transaction options like what rollback segment to use 设置当前事务的特性，它对后面的事务没有影响．</p>
+
+      
+	  
+	
+	
+	  <div class="declare" hidden="hidden"></div>
+	
+	
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/18/Sql语句中的DDL、DML、DCL的介绍/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-what-happen-when" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/18/what-happen-when/">what-happen-when</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/18/what-happen-when/" class="archive-article-date">
+  	<time datetime="2019-03-18T12:18:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>从输入 URL 到页面加载完成的过程中都发生了什么事情？<br>参考了<a href="https://github.com/skyline75489/what-happens-when-zh_CN" target="_blank" rel="noopener">https://github.com/skyline75489/what-happens-when-zh_CN</a> 和 <a href="http://fex.baidu.com/blog/2014/05/what-happen/" target="_blank" rel="noopener">http://fex.baidu.com/blog/2014/05/what-happen/</a></p>
+</blockquote>
+<h1 id="按下”g”键"><a href="#按下”g”键" class="headerlink" title="按下”g”键"></a>按下”g”键</h1><p>接下来的内容介绍了物理键盘和系统中断的工作原理，但是有一部分内容却没有涉及。<br>当你按下“g”键，浏览器接收到这个消息之后，会触发自动完成机制。浏览器根据自己的算法，以及你是否处于隐私浏览模式，会在浏览器的地址框下方给出输入建议。大部分算法会优先考虑根据你的搜索历史和书签等内容给出建议。<br>你打算输入 “google.com”，因此给出的建议并不匹配。但是输入过程中仍然有大量的代码在后台运行，你的每一次按键都会使得给出的建议更加准确。甚至有可能在你输入之前，浏览器就将 “google.com” 建议给你。</p>
+<h2 id="回车键按下"><a href="#回车键按下" class="headerlink" title="回车键按下"></a>回车键按下</h2><p>为了从零开始，我们选择键盘上的回车键被按到最低处作为起点。在这个时刻，一个专用于回车键的电流回路被直接地或者通过电容器间接地闭合了，使得少量的电流进入了键盘的逻辑电路系统。这个系统会扫描每个键的状态，对于按键开关的电位弹跳变化进行噪音消除(debounce)，并将其转化为键盘码值。在这里，回车的码值是13。键盘控制器在得到码值之后，将其编码，用于之后的传输。现在这个传输过程几乎都是通过通用串行总线(USB)或者蓝牙(Bluetooth)来进行的，以前是通过PS/2或者ADB连接进行。</p>
+        
+          <a class="article-more-a" href="/2019/03/18/what-happen-when/#more">more >></a>
+        
+      
+	  
+	
+	
+	  <div class="declare" hidden="hidden"></div>
+	
+	
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/18/what-happen-when/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-tomcat 出现的PermGen Space问题" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -176,7 +345,7 @@
 <p>问题：<br>tomcat服务器运行一段时间，总是会自动报异常：java.lang.OutOfmemoryError: PermGen Space 的错误，导致项目无法正常运行。<br>介绍：<br>PermGen Space：指的是内存的永久保存区，该块内存主要是被JVM用来存放 class 和 mete 信息的，当 class 被加载 loader 的时候就会被存储到该内存区中，与存放类的实例的heap区不同，java中的 垃圾回收器GC 不会在主程序运行期对 PermGen space 进行清理。<br>原因：</p>
 <ol>
 <li>当我们的应用中有很多的class时，很可能就会出现PermGen space的错误。</li>
-<li><p>我们的 tomcat 在重启的时候，不是使用的 ./bin/shutdown.sh 而是使用 kill -9 xxx 直接杀掉，这样的话，存在 PermGen space 里面的内存不会被释放的，这样多长进行 kill 之后，就会导致系统的内存被渐渐吃完了，直到最后 tomcat 报错。</p>
+<li><p>我们的 tomcat 在重启的时候，不是使用的 ./bin/shutdown.sh 而是使用 kill -9 xxx 直接杀掉，这样的话，存在 PermGen space 里面的内存不会被释放的，这样多长进行 kill 之后，就会导致系统的内存被渐渐吃完了，直到最后 tomcat 报错。</p></li></ol>
         
           <a class="article-more-a" href="/2019/03/05/tomcat 出现的PermGen Space问题/#more">more >></a>
         
@@ -188,7 +357,7 @@
 	
 	
       
-    </li></ol></div>
+    </div>
     <div class="article-info article-info-index">
       
       
@@ -257,7 +426,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Shadowsocks Python版一键安装脚本<br>原文由【秋水逸冰】发布于<a href="https://teddysun.com/342.html" target="_blank" rel="noopener">https://teddysun.com/342.html</a><br>由于原文需要FQ才能访问，故备份<br>本脚本适用环境：<br>系统支持：CentOS 6，7，Debian，Ubuntu<br>内存要求：≥128M<br>日期：2018 年 02 月 07 日<br>关于本脚本：<br>一键安装 Python 版 Shadowsocks 的最新版。<br>友情提示：如果你有问题，请先参考这篇《Shadowsocks Troubleshooting》后再问。<br>默认配置：<br>服务器端口：自己设定（如不设定，默认从 9000-19999 之间随机生成）<br>密码：自己设定（如不设定，默认为 teddysun.com）<br>加密方式：自己设定（如不设定，默认为 aes-256-gcm）<br>备注：脚本默认创建单用户配置文件，如需配置多用户，安装完毕后参照下面的教程示例手动修改配置文件后重启即可。<br>
+        <p>Shadowsocks Python版一键安装脚本<br>原文由【秋水逸冰】发布于<a href="https://teddysun.com/342.html" target="_blank" rel="noopener">https://teddysun.com/342.html</a><br>由于原文需要FQ才能访问，故备份<br>本脚本适用环境：<br>系统支持：CentOS 6，7，Debian，Ubuntu<br>内存要求：≥128M<br>日期：2018 年 02 月 07 日<br>关于本脚本：<br>一键安装 Python 版 Shadowsocks 的最新版。<br>友情提示：如果你有问题，请先参考这篇《Shadowsocks Troubleshooting》后再问。<br>默认配置：<br>服务器端口：自己设定（如不设定，默认从 9000-19999 之间随机生成）<br>密码：自己设定（如不设定，默认为 teddysun.com）<br>加密方式：自己设定（如不设定，默认为 aes-256-gcm）<br>备注：脚本默认创建单用户配置文件，如需配置多用户，安装完毕后参照下面的教程示例手动修改配置文件后重启即可。<br></p>
         
           <a class="article-more-a" href="/2019/03/05/Shadowsocks-Python版一键安装脚本/#more">more >></a>
         
@@ -269,7 +438,7 @@
 	
 	
       
-    </p></div>
+    </div>
     <div class="article-info article-info-index">
       
       
@@ -347,7 +516,7 @@
 </ul>
 <p>这三步操作，所以想要实现 <code>i++</code> 这样的原子操作就需要用到 <code>synchronized</code> 或者是 <code>lock</code> 进行加锁处理。</p>
 <p>如果是基础类的自增操作可以使用 <code>AtomicInteger</code> 这样的原子类来实现(其本质是利用了 <code>CPU</code> 级别的 的 <code>CAS</code> 指令来完成的)。</p>
-<p>其中用的最多的方法就是: <code>incrementAndGet()</code> 以原子的方式自增。<br>
+<p>其中用的最多的方法就是: <code>incrementAndGet()</code> 以原子的方式自增。<br></p>
         
           <a class="article-more-a" href="/2019/03/05/Java多线程的3个核心/#more">more >></a>
         
@@ -359,7 +528,7 @@
 	
 	
       
-    </p></div>
+    </div>
     <div class="article-info article-info-index">
       
       
@@ -609,11 +778,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Shadowsocks</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Shadowsocks</a>
+                <a href="javascript:void(0)" class="js-tag color4">sql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -622,6 +795,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
             
             <div class="clearfix"></div>
