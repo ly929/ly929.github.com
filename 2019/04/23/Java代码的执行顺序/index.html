@@ -17,7 +17,7 @@
 <meta property="og:description" content="概念静态代码块：在java中使用static关键字声明的代码块。静态块用于初始化类，为类的属性初始化。每个静态代码块只会执行一次。由于JVM在加载类时会执行静态代码块，所以静态代码块先于主方法执行。构造代码块：直接在类中定义且没有加static关键字的代码块称为{}构造代码块。构造代码块在创建对象时被调用，每次创建对象都会被调用，并且构造代码块的执行次序优先于类构造函数。普通代码块：在方法或语句中">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ly929.github.io/2019/04/23/Java代码的执行顺序/1.png">
-<meta property="og:updated_time" content="2019-04-23T08:15:37.081Z">
+<meta property="og:updated_time" content="2019-04-23T08:18:49.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java代码的执行顺序">
 <meta name="twitter:description" content="概念静态代码块：在java中使用static关键字声明的代码块。静态块用于初始化类，为类的属性初始化。每个静态代码块只会执行一次。由于JVM在加载类时会执行静态代码块，所以静态代码块先于主方法执行。构造代码块：直接在类中定义且没有加static关键字的代码块称为{}构造代码块。构造代码块在创建对象时被调用，每次创建对象都会被调用，并且构造代码块的执行次序优先于类构造函数。普通代码块：在方法或语句中">
@@ -171,7 +171,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>静态代码块</strong>：在java中使用static关键字声明的代码块。静态块用于初始化类，为类的属性初始化。每个静态代码块只会执行一次。由于JVM在加载类时会执行静态代码块，所以静态代码块先于主方法执行。<br><strong>构造代码块</strong>：直接在类中定义且没有加static关键字的代码块称为{}构造代码块。构造代码块在创建对象时被调用，每次创建对象都会被调用，并且构造代码块的执行次序优先于类构造函数。<br><strong>普通代码块</strong>：在方法或语句中出现的{}就称为普通代码块。普通代码块和一般的语句执行顺序由他们在代码中出现的次序决定–“先出现先执行”<br><strong>构造函数</strong>：也称构造器，和类同名，没有返回类型。每个类都有一个默认的构造函数（不带参数），可以不用定义。（void也没有）<br><strong>继承</strong>：在一个现有类型的基础上，通过增加新的方法或者重定义已有方法的方式，产生一个新的类型<br><strong>重载(overload)</strong>：在同一个类里面两个或者是多个方法的方法名相同但是参数不同<br><strong>重写/覆写(override)</strong>：重写也被称为覆写。对一个方法的重写必须发生在具有继承关系的两个类中，即子类对父类方法的重写。它要求两个方法的参数个数和类型以及返回值类型都必须一致，这样才称为方法重写。</p>
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>静态代码块</strong>：在java中使用static关键字声明的代码块。静态块用于初始化类，为类的属性初始化。每个静态代码块只会执行一次。由于JVM在加载类时会执行静态代码块，所以静态代码块先于主方法执行。<br><strong>构造代码块</strong>：直接在类中定义且没有加static关键字的代码块称为{}构造代码块。构造代码块在创建对象时被调用，每次创建对象都会被调用，并且构造代码块的执行次序优先于类构造函数。<br><strong>普通代码块</strong>：在方法或语句中出现的{}就称为普通代码块。普通代码块和一般的语句执行顺序由他们在代码中出现的次序决定–“先出现先执行”<br><strong>构造函数</strong>：也称构造器，和类同名，没有返回类型。每个类都有一个默认的构造函数（不带参数），可以不用定义。（void也没有）<br><strong>继承</strong>：在一个现有类型的基础上，通过增加新的方法或者重定义已有方法的方式，产生一个新的类型<br><strong>重载(overload)</strong>：在同一个类里面两个或者是多个方法的方法名相同但是参数不同<br><strong>重写/覆写(override)</strong>：重写也被称为覆写。对一个方法的重写必须发生在具有继承关系的两个类中，即子类对父类方法的重写。它要求两个方法的参数个数和类型以及返回值类型都必须一致，这样才称为方法重写。<br><a id="more"></a></p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>A类</p>
 <pre><code>public class A {
     static{
