@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="小晕借点盐">
 <meta property="og:description" content="从输入 URL 到页面加载完成的过程中都发生了什么事情？参考了https://github.com/skyline75489/what-happens-when-zh_CN 和 http://fex.baidu.com/blog/2014/05/what-happen/  按下”g”键接下来的内容介绍了物理键盘和系统中断的工作原理，但是有一部分内容却没有涉及。当你按下“g”键，浏览器接收到这个消">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-18T12:39:23.451Z">
+<meta property="og:updated_time" content="2019-04-24T06:59:04.065Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="what-happen-when">
 <meta name="twitter:description" content="从输入 URL 到页面加载完成的过程中都发生了什么事情？参考了https://github.com/skyline75489/what-happens-when-zh_CN 和 http://fex.baidu.com/blog/2014/05/what-happen/  按下”g”键接下来的内容介绍了物理键盘和系统中断的工作原理，但是有一部分内容却没有涉及。当你按下“g”键，浏览器接收到这个消">
@@ -242,6 +242,20 @@
 <h1 id="页面渲染"><a href="#页面渲染" class="headerlink" title="页面渲染"></a>页面渲染</h1><p>通过遍历DOM节点树创建一个“Frame 树”或“渲染树”，并计算每个节点的各个CSS样式值<br>通过累加子节点的宽度，该节点的水平内边距(padding)、边框(border)和外边距(margin)，自底向上的计算”Frame 树”中每个节点的首选(preferred)宽度<br>通过自顶向下的给每个节点的子节点分配可行宽度，计算每个节点的实际宽度<br>通过应用文字折行、累加子节点的高度和此节点的内边距(padding)、边框(border)和外边距(margin)，自底向上的计算每个节点的高度<br>使用上面的计算结果构建每个节点的坐标<br>当存在元素使用 floated，位置有 absolutely 或 relatively 属性的时候，会有更多复杂的计算，详见<a href="http://dev.w3.org/csswg/css2/" target="_blank" rel="noopener">http://dev.w3.org/csswg/css2/</a> 和 <a href="http://www.w3.org/Style/CSS/current-work" target="_blank" rel="noopener">http://www.w3.org/Style/CSS/current-work</a><br>创建layer(层)来表示页面中的哪些部分可以成组的被绘制，而不用被重新栅格化处理。每个帧对象都被分配给一个层<br>页面上的每个层都被分配了纹理(?)<br>每个层的帧对象都会被遍历，计算机执行绘图命令绘制各个层，此过程可能由CPU执行栅格化处理，或者直接通过D2D/SkiaGL在GPU上绘制<br>上面所有步骤都可能利用到最近一次页面渲染时计算出来的各个值，这样可以减少不少计算量<br>计算出各个层的最终位置，一组命令由 Direct3D/OpenGL发出，GPU命令缓冲区清空，命令传至GPU并异步渲染，帧被送到Window Server。</p>
 <h1 id="GPU-渲染"><a href="#GPU-渲染" class="headerlink" title="GPU 渲染"></a>GPU 渲染</h1><p>在渲染过程中，图形处理层可能使用通用用途的 CPU，也可能使用图形处理器 GPU<br>当使用 GPU 用于图形渲染时，图形驱动软件会把任务分成多个部分，这样可以充分利用 GPU 强大的并行计算能力，用于在渲染过程中进行大量的浮点计算。<br>Window Server<br>后期渲染与用户引发的处理<br>渲染结束后，浏览器根据某些时间机制运行JavaScript代码(比如Google Doodle动画)或与用户交互(在搜索栏输入关键字获得搜索建议)。类似Flash和Java的插件也会运行，尽管Google主页里没有。这些脚本可以触发网络请求，也可能改变网页的内容和布局，产生又一轮渲染与绘制</p>
 
+      <script>
+        window.disqusProxy={
+          shortname: 'liangyun-dev-1',
+          username: '2506810',
+          server: '172.96.249.177',
+          port: 8989,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2019/03/18/what-happen-when/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script>
       
 	  
 	
@@ -410,7 +424,13 @@
 
   
     <section id="comments">
-      <div id="disqus_thread"></div>
+      
+      <script src="//cdn.bootcss.com/react/16.0.0/umd/react.production.min.js"></script>
+      <script src="//cdn.bootcss.com/react-dom/16.0.0/umd/react-dom.production.min.js"></script>
+      <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/blockies-identicon@0.1.0/blockies.min.js"></script>
+      <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div id="disqus_proxy_thread"><script src="/scripts/hexo-disqus-proxy-primary.js" async></script></div>
         <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'liangyun-dev-1'; // required: replace example with your forum shortname
@@ -527,14 +547,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Shadowsocks</a>
               </li>
              
@@ -543,15 +555,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">test</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">jvm内存</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">test</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -692,5 +712,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":70,"height":140},"mobile":{"show":false}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":70,"height":140},"mobile":{"show":false}});</script></body>
 </html>

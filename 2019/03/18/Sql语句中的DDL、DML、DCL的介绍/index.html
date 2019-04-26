@@ -176,6 +176,20 @@
 <p>1.<strong>SELECT</strong> - retrieve data from the a database 查询<br>2.<strong>INSERT</strong> - insert data into a table 添加<br>3.<strong>UPDATE</strong> - updates existing data within a table 更新<br>4.<strong>DELETE</strong> - deletes all records from a table, the space for the records remain 删除<br>5.<strong>CALL</strong> - call a PL/SQL or Java subprogram<br>6.<strong>EXPLAIN PLAN</strong> - explain access path to data<br>Oracle RDBMS执行每一条SQL语句，都必须经过Oracle优化器的评估。所以，了解优化器是如何选择(搜索)路径以及索引是如何被使用的，对优化SQL语句有很大的帮助。Explain可以用来迅速方便地查出对于给定SQL语句中的查询数据是如何得到的即搜索路径(我们通常称为Access Path)。从而使我们选择最优的查询方式达到最大的优化效果。<br>7.<strong>LOCK TABLE</strong> - control concurrency 锁，用于控制并发</p>
 <h1 id="三、DCL"><a href="#三、DCL" class="headerlink" title="三、DCL"></a>三、DCL</h1><p><strong>DCL is Data Control Language statements.</strong> 数据控制语言，用来授予或回收访问数据库的某种特权，并控制数据库操纵事务发生的时间及效果，对数据库实行监视等<br><strong>COMMIT</strong> - save work done 提交<br><strong>SAVEPOINT</strong> - identify a point in a transaction to which you can later roll back 保存点<br><strong>ROLLBACK</strong> - restore database to original since the last COMMIT 回滚<br><strong>SET TRANSACTION </strong>- Change transaction options like what rollback segment to use 设置当前事务的特性，它对后面的事务没有影响．</p>
 
+      <script>
+        window.disqusProxy={
+          shortname: 'liangyun-dev-1',
+          username: '2506810',
+          server: '172.96.249.177',
+          port: 8989,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2019/03/18/Sql语句中的DDL、DML、DCL的介绍/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script>
       
 	  
 	
@@ -361,7 +375,13 @@
 
   
     <section id="comments">
-      <div id="disqus_thread"></div>
+      
+      <script src="//cdn.bootcss.com/react/16.0.0/umd/react.production.min.js"></script>
+      <script src="//cdn.bootcss.com/react-dom/16.0.0/umd/react-dom.production.min.js"></script>
+      <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/blockies-identicon@0.1.0/blockies.min.js"></script>
+      <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div id="disqus_proxy_thread"><script src="/scripts/hexo-disqus-proxy-primary.js" async></script></div>
         <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'liangyun-dev-1'; // required: replace example with your forum shortname
@@ -478,14 +498,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Shadowsocks</a>
               </li>
              
@@ -494,15 +506,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">test</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">jvm内存</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">test</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -643,5 +663,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":70,"height":140},"mobile":{"show":false}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":70,"height":140},"mobile":{"show":false}});</script></body>
 </html>

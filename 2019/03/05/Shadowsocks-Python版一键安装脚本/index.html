@@ -173,6 +173,20 @@
 <p>Welcome to visit:<a href="https://teddysun.com/342.html" target="_blank" rel="noopener">https://teddysun.com/342.html</a><br>Enjoy it!<br>卸载方法：<br>使用root用户登录，运行以下命令：<br>./shadowsocks.sh uninstall<br>单用户配置文件示例（2015 年 08 月 28 日修正）：<br>配置文件路径：/etc/shadowsocks.json<br>{<br>    “server”:”0.0.0.0”,<br>    “server_port”:your_server_port,<br>    “local_address”:”127.0.0.1”,<br>    “local_port”:1080,<br>    “password”:”your_password”,<br>    “timeout”:300,<br>    “method”:”your_encryption_method”,<br>    “fast_open”: false<br>}</p>
 <p>多用户多端口配置文件示例（2015 年 08 月 28 日修正）：<br>配置文件路径：/etc/shadowsocks.json<br>{<br>    “server”:”0.0.0.0”,<br>    “local_address”:”127.0.0.1”,<br>    “local_port”:1080,<br>    “port_password”:{<br>         “8989”:”password0”,<br>         “9001”:”password1”,<br>         “9002”:”password2”,<br>         “9003”:”password3”,<br>         “9004”:”password4”<br>    },<br>    “timeout”:300,<br>    “method”:”your_encryption_method”,<br>    “fast_open”: false<br>}<br>使用命令（2015 年 08 月 28 日修正）：<br>启动：/etc/init.d/shadowsocks start<br>停止：/etc/init.d/shadowsocks stop<br>重启：/etc/init.d/shadowsocks restart<br>状态：/etc/init.d/shadowsocks status<br>更多版本 Shadowsocks 服务端一键安装脚本：<br>ShadowsocksR 版一键安装脚本（CentOS，Debian，Ubuntu）<br>CentOS 下 Shadowsocks-libev 一键安装脚本<br>Debian 下 Shadowsocks-libev 一键安装脚本<br>Shadowsocks-go 一键安装脚本（CentOS，Debian，Ubuntu）<br>Shadowsocks 一键安装脚本（四合一）<br>参考链接：<br><a href="https://teddysun.com/339.html" target="_blank" rel="noopener">https://teddysun.com/339.html</a><br>更新日志<br>（2018 年 02 月 07 日）<br>1、修改：将默认端口从 8989 改为从 9000-19999 之间随机生成。<br>（2017 年 07 月 21 日）<br>1、修正：默认加密方式从 aes-256-cfb 改为 aes-256-gcm（官方原版客户端支持该加密方式）；<br>2、新增：安装时可选 16 种加密方式的其中之一。如下所示：<br>aes-256-gcm<br>aes-192-gcm<br>aes-128-gcm<br>aes-256-ctr<br>aes-192-ctr<br>aes-128-ctr<br>aes-256-cfb<br>aes-192-cfb<br>aes-128-cfb<br>camellia-128-cfb<br>camellia-192-cfb<br>camellia-256-cfb<br>chacha20-ietf-poly1305<br>chacha20-ietf<br>chacha20<br>rc4-md5<br>（2016 年 08 月 18 日）<br>1、修正：默认安装 Github 上 master 分支最新版本（目前为 2.9.0）。<br>2、修正：由于原作者已经不再更新 pip 下的源代码，故不再使用 pip 安装 Shadowsocks，而是改为下载 Github 的 master 分支来安装。如果在一段时间后，版本升级了，则先卸载，并再次执行本脚本就可以升级为最新版。<br>（2016 年 05 月 12 日）<br>1、新增在 CentOS 7 下的防火墙规则设置。<br>（2015 年 08 月 28 日）<br>1、修正控制脚本 /etc/init.d/shadowsocks 在 CentOS 7 无法查看 status 的问题。<br>（2015 年 08 月 01 日）<br>1、新增自定义服务器端口功能（如不设定，默认端口为 8989）；<br>（2015 年 03 月 10 日）<br>1、新增在 Debian、Ubuntu 下的一键安装；<br>（2015 年 01 月 21 日）<br>1、修正配置文件，与官方给出的 Sample 一致；<br>2、修改启动脚本，使用官方给出的后台启动和停止命令。<br>（2014 年 10 月 10 日）<br>跟作者反馈了多用户多端口问题，作者已更新 Wiki 页面。本教程新增多用户多端口配置文件的 sample 。<br>（2014 年 09 月 24 日）<br>如何配置多用户？详见：这里<br>备注：Shadowsocks 已经支持多用户，在配置文件中增加不同的端口，对应不同的密码即可。<br>（2014 年 07 月 12 日）<br>1、修正获取公网 IP 时的一个问题。建议不要使用共享公网 IP 的 VPS 来搭建 Shadowsocks 服务。<br>（2014 年 05 月 29 日）<br>1、增加 chkconfig 配置，实现 service 命令。<br>2、配置文件名从 /etc/config.json 改为 /etc/shadowsocks.json（与官方的命名一致）。<br>3、配置文件中新增 workers ，值默认为 1（与官方配置同步）。<br>（2014 年 05 月 27 日）<br>1、修正开机自启动失效的问题。<br>2、优化是否后台启动成功的判断逻辑。<br>（2014 年 05 月 04 日）<br>1、修正对增加防火墙端口逻辑的判断bug，对于已经放行 8989 端口的情况下，则无需再次增加。<br>2、修正获取服务器 IP 的判断bug，对于多 IP 的 VPS 或服务器，默认只取第一个公网 IP 写到配置文件（/etc/config.json）里。<br>3、加入开机自启动。<br>转载请注明：秋水逸冰 » Shadowsocks Python版一键安装脚本 <a href="https://teddysun.com/342.html" target="_blank" rel="noopener">https://teddysun.com/342.html</a></p>
 
+      <script>
+        window.disqusProxy={
+          shortname: 'liangyun-dev-1',
+          username: '2506810',
+          server: '172.96.249.177',
+          port: 8989,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2019/03/05/Shadowsocks-Python版一键安装脚本/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script>
       
 	  
 	
@@ -341,7 +355,13 @@
 
   
     <section id="comments">
-      <div id="disqus_thread"></div>
+      
+      <script src="//cdn.bootcss.com/react/16.0.0/umd/react.production.min.js"></script>
+      <script src="//cdn.bootcss.com/react-dom/16.0.0/umd/react-dom.production.min.js"></script>
+      <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/blockies-identicon@0.1.0/blockies.min.js"></script>
+      <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div id="disqus_proxy_thread"><script src="/scripts/hexo-disqus-proxy-primary.js" async></script></div>
         <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'liangyun-dev-1'; // required: replace example with your forum shortname
@@ -458,14 +478,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Shadowsocks</a>
               </li>
              
@@ -474,15 +486,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">test</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">jvm内存</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">test</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -623,5 +643,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":70,"height":140},"mobile":{"show":false}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":70,"height":140},"mobile":{"show":false}});</script></body>
 </html>
