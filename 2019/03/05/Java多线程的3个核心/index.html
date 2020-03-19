@@ -5,19 +5,19 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="https://ly929.github.io">
+  <link rel="dns-prefetch" href="https://liangyun.dev">
   <title>Java 多线程三大核心 | 小晕借点盐</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Java 多线程三大核心原子性Java 的原子性就和数据库事务的原子性差不多，一个操作中要么全部执行成功或者失败。 JMM 只是保证了基本的原子性，但类似于 i++ 之类的操作，看似是原子操作，其实里面涉及到:  获取 i 的值。 自增。 再赋值给 i。  这三步操作，所以想要实现 i++ 这样的原子操作就需要用到 synchronized 或者是 lock 进行加锁处理。 如果是基础类的自增操作">
 <meta name="keywords" content="Java 多线程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java 多线程三大核心">
-<meta property="og:url" content="https://ly929.github.io/2019/03/05/Java多线程的3个核心/index.html">
+<meta property="og:url" content="https://liangyun.dev/2019/03/05/Java多线程的3个核心/index.html">
 <meta property="og:site_name" content="小晕借点盐">
 <meta property="og:description" content="Java 多线程三大核心原子性Java 的原子性就和数据库事务的原子性差不多，一个操作中要么全部执行成功或者失败。 JMM 只是保证了基本的原子性，但类似于 i++ 之类的操作，看似是原子操作，其实里面涉及到:  获取 i 的值。 自增。 再赋值给 i。  这三步操作，所以想要实现 i++ 这样的原子操作就需要用到 synchronized 或者是 lock 进行加锁处理。 如果是基础类的自增操作">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fmouu3fpokj31ae0osjt1.jpg">
-<meta property="og:updated_time" content="2019-03-05T13:56:15.364Z">
+<meta property="og:updated_time" content="2019-04-22T07:20:46.144Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 多线程三大核心">
 <meta name="twitter:description" content="Java 多线程三大核心原子性Java 的原子性就和数据库事务的原子性差不多，一个操作中要么全部执行成功或者失败。 JMM 只是保证了基本的原子性，但类似于 i++ 之类的操作，看似是原子操作，其实里面涉及到:  获取 i 的值。 自增。 再赋值给 i。  这三步操作，所以想要实现 i++ 这样的原子操作就需要用到 synchronized 或者是 lock 进行加锁处理。 如果是基础类的自增操作">
@@ -86,9 +86,9 @@
 				
 					<a class="github" target="_blank" href="https://github.com/ly929" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="weibo" target="_blank" href="https://weibo.com/u/2646224491" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="mail" target="_blank" href="mailto:litten225@qq.com" title="mail"><i class="icon-mail"></i></a>
+					<a class="mail" target="_blank" href="mailto:2506810979@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -125,9 +125,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/ly929" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="weibo" target="_blank" href="https://weibo.com/u/2646224491" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="mail" target="_blank" href="mailto:litten225@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="mailto:2506810979@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -217,11 +217,42 @@
 <li><code>volatile</code> 关键字只能保证可见性，顺序性，<strong>不能保证原子性</strong>。</li>
 </ul>
 
+      <script>
+        window.disqusProxy={
+          shortname: 'liangyun-dev-1',
+          username: '2506810',
+          server: '172.96.249.177',
+          port: 8989,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2019/03/05/Java多线程的3个核心/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script>
       
 	  
 	
 	
-	  <div class="declare" hidden="hidden"></div>
+	  <div class="declare">
+		<strong>本文作者：</strong>
+		
+		  晕
+		
+		<br>
+		<strong>本文链接：</strong>
+		https://liangyun.dev/2019/03/05/Java多线程的3个核心/
+		<br>
+		<strong>版权声明：</strong>
+		本作品采用
+		<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+		进行许可。转载请注明出处！
+		
+		  <br>
+		  <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+		
+	  </div>
 	
 	
       
@@ -322,7 +353,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://ly929.github.io/2019/03/05/Java多线程的3个核心/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://liangyun.dev/2019/03/05/Java多线程的3个核心/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -385,6 +416,9 @@
 
 
 
+
+ 
+  
   
   
   
@@ -393,10 +427,16 @@
 
   
     <section id="comments">
-      <div id="disqus_thread"></div>
+      
+      <script src="//cdn.bootcss.com/react/16.0.0/umd/react.production.min.js"></script>
+      <script src="//cdn.bootcss.com/react-dom/16.0.0/umd/react-dom.production.min.js"></script>
+      <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/blockies-identicon@0.1.0/blockies.min.js"></script>
+      <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div id="disqus_proxy_thread"><script src="/scripts/hexo-disqus-proxy-primary.js" async></script></div>
         <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = '[object Object]'; // required: replace example with your forum shortname
+        var disqus_shortname = 'liangyun-dev-1'; // required: replace example with your forum shortname
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
@@ -410,6 +450,7 @@
   
 
   
+
 
 
           </div>
@@ -505,11 +546,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Shadowsocks</a>
+                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
+                <a href="javascript:void(0)" class="js-tag color2">Shadowsocks</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -517,11 +558,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">jvm内存</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">test</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -588,7 +641,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">做Java web后端开发的&lt;br&gt;&lt;br&gt;喜欢看小说玩游戏听音乐</div>
   	  	
     	</section>
     
@@ -662,5 +715,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":70,"height":140},"mobile":{"show":false}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":70,"height":140},"mobile":{"show":false}});</script></body>
 </html>

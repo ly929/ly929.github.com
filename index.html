@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="https://ly929.github.io">
+  <link rel="dns-prefetch" href="https://liangyun.dev">
   <title>小晕借点盐</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Java小将|膜法师">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="website">
 <meta property="og:title" content="小晕借点盐">
-<meta property="og:url" content="https://ly929.github.io/index.html">
+<meta property="og:url" content="https://liangyun.dev/index.html">
 <meta property="og:site_name" content="小晕借点盐">
 <meta property="og:description" content="Java小将|膜法师">
 <meta property="og:locale" content="default">
@@ -83,9 +83,9 @@
 				
 					<a class="github" target="_blank" href="https://github.com/ly929" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="weibo" target="_blank" href="https://weibo.com/u/2646224491" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="mail" target="_blank" href="mailto:litten225@qq.com" title="mail"><i class="icon-mail"></i></a>
+					<a class="mail" target="_blank" href="mailto:2506810979@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -122,9 +122,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/ly929" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="weibo" target="_blank" href="https://weibo.com/u/2646224491" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="mail" target="_blank" href="mailto:litten225@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="mailto:2506810979@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -149,6 +149,369 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Java代码的执行顺序" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/23/Java代码的执行顺序/">Java代码的执行顺序</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/23/Java代码的执行顺序/" class="archive-article-date">
+  	<time datetime="2019-04-23T08:15:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>静态代码块</strong>：在java中使用static关键字声明的代码块。静态块用于初始化类，为类的属性初始化。每个静态代码块只会执行一次。由于JVM在加载类时会执行静态代码块，所以静态代码块先于主方法执行。<br><strong>构造代码块</strong>：直接在类中定义且没有加static关键字的代码块称为{}构造代码块。构造代码块在创建对象时被调用，每次创建对象都会被调用，并且构造代码块的执行次序优先于类构造函数。<br><strong>普通代码块</strong>：在方法或语句中出现的{}就称为普通代码块。普通代码块和一般的语句执行顺序由他们在代码中出现的次序决定–“先出现先执行”<br><strong>构造函数</strong>：也称构造器，和类同名，没有返回类型。每个类都有一个默认的构造函数（不带参数），可以不用定义。（void也没有）<br><strong>继承</strong>：在一个现有类型的基础上，通过增加新的方法或者重定义已有方法的方式，产生一个新的类型<br><strong>重载(overload)</strong>：在同一个类里面两个或者是多个方法的方法名相同但是参数不同<br><strong>重写/覆写(override)</strong>：重写也被称为覆写。对一个方法的重写必须发生在具有继承关系的两个类中，即子类对父类方法的重写。它要求两个方法的参数个数和类型以及返回值类型都必须一致，这样才称为方法重写。<br></p>
+        
+          <a class="article-more-a" href="/2019/04/23/Java代码的执行顺序/#more">more >></a>
+        
+      
+	  
+	
+	
+	  <div class="declare" hidden="hidden"></div>
+	
+	
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/23/Java代码的执行顺序/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-HashMap常见问答" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/22/HashMap常见问答/">HashMap常见问答</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/22/HashMap常见问答/" class="archive-article-date">
+  	<time datetime="2019-04-22T08:05:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>下文全部源码来自jdk1.7.0_71</p>
+<h2 id="1-hashMap的实现原理"><a href="#1-hashMap的实现原理" class="headerlink" title="1.hashMap的实现原理"></a>1.hashMap的实现原理</h2><p>HashMap使用到的数据类型主要就是数组和链表，如图<br><img src="/2019/04/22/HashMap常见问答/14101204468.jpeg" alt="hashMap内部组成"></p>
+<h2 id="2-hashMap是怎样实现key-value这样键值对的保存"><a href="#2-hashMap是怎样实现key-value这样键值对的保存" class="headerlink" title="2.hashMap是怎样实现key-value这样键值对的保存"></a>2.hashMap是怎样实现key-value这样键值对的保存</h2><p>HashMap中有一个内部类Entry</p>
+<pre><code>static class Entry&lt;K,V&gt; implements Map.Entry&lt;K,V&gt; {
+
+    final K key;
+    V value;
+    Entry&lt;K,V&gt; next;
+    int hash;
+    ……
+}
+</code></pre><p>主要有4个属性，key ,hash,value,指向下一个节点的引用next ，看到这个实体类就明白了，在HashMap中存放的key-value实质是通过实体类Entry来保存的。</p>
+        
+          <a class="article-more-a" href="/2019/04/22/HashMap常见问答/#more">more >></a>
+        
+      
+	  
+	
+	
+	  <div class="declare" hidden="hidden"></div>
+	
+	
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">HashMap</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/22/HashMap常见问答/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-jvm-GC策略" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/22/jvm-GC策略/">jvm GC策略</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/22/jvm-GC策略/" class="archive-article-date">
+  	<time datetime="2019-04-22T07:41:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>GC (Garbage Collection)的基本原理：将内存中不再被使用的对象进行回收，GC中用于回收的方法称为收集器，由于GC需要消耗一些资源和时间，Java在对对象的生命周期特征进行分析后，按照新生代、旧生代的方式来对对象进行收集，以尽可能的缩短GC对应用造成的暂停。<br>（1）对新生代的对象的收集称为minor GC；<br>（2）对旧生代的对象的收集称为Full GC；<br>（3）程序中主动调用System.gc()强制执行的GC为Full GC。</p>
+<p><strong>JVM里的GC(Garbage Collection)的算法有很多种，如标记清除收集器，压缩收集器，分代收集器等等</strong><br></p>
+        
+          <a class="article-more-a" href="/2019/04/22/jvm-GC策略/#more">more >></a>
+        
+      
+	  
+	
+	
+	  <div class="declare" hidden="hidden"></div>
+	
+	
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">jvm内存</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/jvm//" class="article-tag-list-link color4">jvm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/22/jvm-GC策略/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-jvm内存组成" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/22/jvm内存组成/">jvm内存组成</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/22/jvm内存组成/" class="archive-article-date">
+  	<time datetime="2019-04-22T07:26:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JVM的内存区域是怎么划分的？"><a href="#JVM的内存区域是怎么划分的？" class="headerlink" title="JVM的内存区域是怎么划分的？"></a>JVM的内存区域是怎么划分的？</h1><p>下面这张图，反映了运行中的Java进程内存占用情况：</p>
+<p><img src="/2019/04/22/jvm内存组成/memory-area1.png" alt="jvm内存组成"></p>
+        
+          <a class="article-more-a" href="/2019/04/22/jvm内存组成/#more">more >></a>
+        
+      
+	  
+	
+	
+	  <div class="declare" hidden="hidden"></div>
+	
+	
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">jvm内存</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/jvm//" class="article-tag-list-link color4">jvm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/22/jvm内存组成/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
   
     <article id="post-Sql语句中的DDL、DML、DCL的介绍" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
@@ -177,6 +540,20 @@
 <p>1.<strong>SELECT</strong> - retrieve data from the a database 查询<br>2.<strong>INSERT</strong> - insert data into a table 添加<br>3.<strong>UPDATE</strong> - updates existing data within a table 更新<br>4.<strong>DELETE</strong> - deletes all records from a table, the space for the records remain 删除<br>5.<strong>CALL</strong> - call a PL/SQL or Java subprogram<br>6.<strong>EXPLAIN PLAN</strong> - explain access path to data<br>Oracle RDBMS执行每一条SQL语句，都必须经过Oracle优化器的评估。所以，了解优化器是如何选择(搜索)路径以及索引是如何被使用的，对优化SQL语句有很大的帮助。Explain可以用来迅速方便地查出对于给定SQL语句中的查询数据是如何得到的即搜索路径(我们通常称为Access Path)。从而使我们选择最优的查询方式达到最大的优化效果。<br>7.<strong>LOCK TABLE</strong> - control concurrency 锁，用于控制并发</p>
 <h1 id="三、DCL"><a href="#三、DCL" class="headerlink" title="三、DCL"></a>三、DCL</h1><p><strong>DCL is Data Control Language statements.</strong> 数据控制语言，用来授予或回收访问数据库的某种特权，并控制数据库操纵事务发生的时间及效果，对数据库实行监视等<br><strong>COMMIT</strong> - save work done 提交<br><strong>SAVEPOINT</strong> - identify a point in a transaction to which you can later roll back 保存点<br><strong>ROLLBACK</strong> - restore database to original since the last COMMIT 回滚<br><strong>SET TRANSACTION </strong>- Change transaction options like what rollback segment to use 设置当前事务的特性，它对后面的事务没有影响．</p>
 
+      <script>
+        window.disqusProxy={
+          shortname: 'liangyun-dev-1',
+          username: '2506810',
+          server: '172.96.249.177',
+          port: 8989,
+          adminAvatar: '/avatars/admin-avatar.jpg',
+          identifier: '2019/03/18/Sql语句中的DDL、DML、DCL的介绍/',
+        };
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.disqusProxy.identifier;
+        };
+      </script>
       
 	  
 	
@@ -229,6 +606,7 @@
         
     </div>
 </aside>
+
 
 
 
@@ -314,6 +692,7 @@
         
     </div>
 </aside>
+
 
 
 
@@ -405,6 +784,7 @@
 
 
 
+
   
     <article id="post-Shadowsocks-Python版一键安装脚本" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
@@ -482,6 +862,7 @@
         
     </div>
 </aside>
+
 
 
 
@@ -587,6 +968,7 @@
 
 
 
+
   
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
@@ -677,6 +1059,7 @@
         
     </div>
 </aside>
+
 
 
 
@@ -778,11 +1161,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Shadowsocks</a>
+                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
+                <a href="javascript:void(0)" class="js-tag color2">Shadowsocks</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -790,11 +1173,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">jvm内存</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">test</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java 多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -861,7 +1256,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">做Java web后端开发的&lt;br&gt;&lt;br&gt;喜欢看小说玩游戏听音乐</div>
   	  	
     	</section>
     
@@ -935,5 +1330,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":70,"height":140},"mobile":{"show":false}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":70,"height":140},"mobile":{"show":false}});</script></body>
 </html>
